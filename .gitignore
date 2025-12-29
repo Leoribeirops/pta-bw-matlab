@@ -1,0 +1,24 @@
+# MATLAB temp
+*.asv
+*.m~
+*.autosave
+
+# Simulink / cache
+slprj/
+*.slxc
+
+# Compiled
+*.mex*
+*.p
+*.pcode
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Large data by default
+data/raw/
+data/processed/
+results/
+docs/
+
