@@ -1,16 +1,6 @@
 %%
 clc; clear; 
-Device = 1;
-if Device==1
-    cd('G:\Meu_drive\dev_2025\pta-bw-matlab');
-    baseDataPath = 'G:\Meu_drive\dev_2025\MITBIH';
-end
-
-if Device==2
-    cd('G:\Meu_drive\dev_2025\pta-bw-matlab');
-    baseDataPath = 'G:\Meu drive\dev_2025\MITBIH';
-end
-
+baseDataPath = 'data';
 fileName = 'ECG_MIT_01.mat';
 data = load(fullfile(baseDataPath, fileName));
 ecg=data.ECG_MIT_1;
@@ -56,4 +46,8 @@ plot_signal_window(MWI,             sample_plot, 5, 'Moving Window Integration')
 %% Pan Tompkins Original
 fs=360;
 gr=1;
-[qrs_amp_raw,qrs_i_raw,Beat_C1]=pan_tompkins_original(ecg,fs,gr);
+[qrs_amp_raw,qrs_i_raw,delay] = pan_tompkin(ecg, fs, 1, 6000, 1);
+
+%%
+[qrs_amp_raw,qrs_i_raw,delay] = pan_tompkin(ecg, fs, 1, 6000, 20000);
+
