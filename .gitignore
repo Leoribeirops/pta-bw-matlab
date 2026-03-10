@@ -6,6 +6,7 @@
 # Simulink / cache
 slprj/
 *.slxc
+*.csv
 
 # Compiled
 *.mex*
@@ -22,3 +23,4 @@ data/processed/
 results/
 docs/
 
+%% Tabela QRS reais (1–48)

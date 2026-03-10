@@ -22,6 +22,7 @@ function startup()
     addpath(projectRoot, "-begin");
 
     addProjectPath(fullfile(projectRoot, "functions"));
+    addProjectPath("../MITBIH"));
     
     % Se você tiver packages +foo/+bar ou @classes dentro de src/functions,
     % o addpath no pai já resolve (não precisa genpath). Use genpath só se necessário.
